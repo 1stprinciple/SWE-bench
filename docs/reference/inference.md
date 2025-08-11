@@ -44,8 +44,8 @@ This script runs inference on a dataset using either the OpenAI or Anthropic API
 # Example with Anthropic Claude
 export ANTHROPIC_API_KEY=<your key>
 python -m swebench.inference.run_api \
-    --dataset_name_or_path princeton-nlp/SWE-bench_oracle \
-    --model_name_or_path claude-2 \
+    --dataset_name_or_path princeton-nlp/SWE-bench_Lite_oracle \
+    --model_name_or_path accounts/fireworks/models/qwen3-coder-30b-a3b-instruct \
     --output_dir ./outputs
 ```
 
@@ -113,4 +113,4 @@ All inference scripts produce outputs in a format compatible with the SWE-bench 
 - For API models, monitor costs carefully and set appropriate `--max_cost` limits
 - For local models, ensure you have sufficient GPU memory for the model size
 - Save intermediate outputs frequently to avoid losing progress
-- When running live inference, ensure your retrieval corpus is appropriate for the repository of the issue 
+- When running live inference, ensure your retrieval corpus is appropriate for the repository of the issue
